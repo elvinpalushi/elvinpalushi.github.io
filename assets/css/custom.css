@@ -1,0 +1,88 @@
+/* Projects Section - Clickable Cards */
+.project-card {
+    margin-bottom: 2.5em;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--global-bg-color);
+    border: 1px solid var(--global-border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .project-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+  }
+
+  .project-card a,
+  .project-card a:hover,
+  .project-card a:focus,
+  .project-card a:visited {
+    text-decoration: none !important;
+  }
+  
+  .project-card a *,
+  .project-card a:hover *,
+  .project-card a:focus * {
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+
+  .project-image-wrapper {
+    flex-shrink: 0;
+  }
+  
+  .project-image {
+    width: 140px;           /* Fixed width - no more huge images */
+    height: 140px;          /* Fixed height for consistency */
+    object-fit: cover;      /* Crops nicely if image isn't square */
+    border-radius: 10px;
+  }
+  
+  .project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .project-title {
+    margin: 0 0 12px 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-decoration: none !important;
+  }
+  
+  .project-description {
+    margin: 0;
+    color: var(--global-text-color);
+    line-height: 1.6;
+    font-size: 1em;
+    text-decoration: none !important;
+  }
+  
+  /* Responsive: Stack vertically on small screens */
+  @media (max-width: 768px) {
+    .project-link {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      padding: 20px;
+    }
+    
+    .project-image {
+      width: 180px;
+      height: 180px;
+    }
+  }
